@@ -436,7 +436,7 @@ body {
 
 .trace-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; 
 }
 
 .trace-content p {
@@ -483,7 +483,7 @@ body {
     color: var(--text-light);
     margin-bottom: 1rem;
     line-height: 1.6;
-    text-align: center;
+    text-align: center
 }
 
 .trace-text h4 {
@@ -502,11 +502,110 @@ body {
     color: var(--text-light);
 }
 
-/* Responsive pour les traces */
-@media (max-width: 768px) {
-    .trace-image {
-        height: 250px;
-    }
+/* Section Traces - Layout avec texte au-dessus et images en dessous */
+.trace-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.trace-text {
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.trace-text p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.trace-text h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.trace-text ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.trace-text li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.trace-images {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.trace-images img {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.trace-images img:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Styles pour les cartes de traces */
+.trace-card {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    max-width: 400px;
+    width: 100%;
+}
+
+.trace-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.trace-card-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.trace-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.trace-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.trace-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.trace-card .btn {
+    margin-top: 1rem;
 }
 
 /* Section Compétences */

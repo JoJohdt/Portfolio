@@ -18,42 +18,80 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.remove('active');
         });
     });
+      // Fonction pour détecter si on est sur la page principale
+    function isMainPage() {
+        const path = window.location.pathname;
+        return path.includes('index.html') || path === '/' || path.endsWith('/') || path.endsWith('Portfolio');
+    }
     
-    // Navigation active link
-    window.addEventListener('scroll', function() {
-        let current = '';
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
+    // Navigation active link (seulement sur la page principale)
+    if (isMainPage()) {
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
         });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
-    
-    // Smooth scroll pour les liens de navigation
+    }
+      // Smooth scroll et navigation intelligente pour les liens
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const href = this.getAttribute('href');
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Hauteur de la navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Si le lien commence par "#", on gère la navigation
+            if (href.startsWith('#')) {
+                // On est sur la page principale, scroll normal
+                if (isMainPage()) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector(href);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 70; // Hauteur de la navbar
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // On est sur une page de trace, rediriger vers index.html avec l'ancre
+                    e.preventDefault();
+                    window.location.href = 'index.html' + href;
+                }
+            } else if (href.startsWith('index.html#')) {
+                // Lien vers la page principale avec ancre
+                if (!isMainPage()) {
+                    // On est sur une page de trace, rediriger
+                    e.preventDefault();
+                    window.location.href = href;
+                } else {
+                    // On est déjà sur la page principale, scroll vers la section
+                    e.preventDefault();
+                    const targetId = href.split('#')[1];
+                    const targetSection = document.querySelector('#' + targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 70;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             }
+            // Pour les autres liens (trace1.html, trace2.html, etc.), laisser le comportement par défaut
         });
     });
     
@@ -145,13 +183,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
             // Scroll vers le bas
             navbar.style.transform = 'translateY(-100%)';
         } else {
             // Scroll vers le haut
-            navbar.style.transform = 'translateY(0)';        }
+            navbar.style.transform = 'translateY(0)';
+        }
         lastScrollTop = scrollTop;
     });
 });
