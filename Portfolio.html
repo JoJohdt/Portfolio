@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#accueil" class="nav-link active">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#a-propos" class="nav-link">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projets" class="nav-link">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#traces" class="nav-link">Traces</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#competences" class="nav-link">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bonjour, je suis <span class="highlight">Johan</span></h1>
+            <p class="hero-subtitle">Étudiant en BUT Informatique</p>
+            <p class="hero-description">Passionné par le développement web et les nouvelles technologies</p>            <div class="hero-buttons">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="a-propos" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis étudiant en BUT Informatique, passionné par le développement web et les nouvelles technologies. Mon parcours m'a permis d'acquérir des compétences solides en programmation et en conception d'applications.</p>
+                    <p>J'aime relever des défis techniques et créer des solutions innovantes. Mon objectif est de continuer à apprendre et à me perfectionner dans le domaine de l'informatique.</p>                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>Septembre 2024 - Juin 2025</h3>
+                            <p>Années d'études</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Technologies maîtrisées</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Développement</h3>
+                        <p>Création d'applications web modernes et responsives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">                <div class="project-card">
+                    <div class="project-image">
+                        <img src="narrow_range.webp" alt="Povocoder" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Povocoder</h3>
+                        <p>Dans le cadre d'un projet de groupe, nous avons créé une application en Java pour manier une piste audio. De plus cela à était fait en java</p>                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/noaleenknegt/SAE1-2" target="_blank" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="project-card">
+                    <div class="project-image">
+                        <img src="Atos.jfif" alt="Site Web Atos" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Web Présentation</h3>
+                        <p>Dans le cadre d'un projet de groupe, nous avons créé un site web, pour présenter l'entreprise Atos.</p>                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>                        <div class="project-buttons">
+                            <a href="https://github.com/LAFAYMehdi/TechSpotlight-Atos?tab=readme-ov-file" target="_blank" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://lafaymehdi.github.io/TechSpotlight-Atos/Pages/PageEnv.html" target="_blank" class="project-link">Voir le site <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Section Traces -->
+    <section id="traces" class="section">
+        <div class="container">
+            <h2 class="section-title">Traces d'Apprentissage</h2>
+            <div class="traces-content">                <div class="trace-main">                    <div class="trace-image">
+                        <img src="Site_Atos.jpg" alt="Site Atos" style="width: 100%; height: 100%; object-fit: contain; border-radius: 1rem;">
+                    </div>
+                    <div class="trace-image">
+                        <img src="Site_Atos_2.jpg" alt="Site Atos 2" style="width: 100%; height: 100%; object-fit: contain; border-radius: 1rem;">
+                    </div>                    <div class="trace-text">
+                        <h3>Projet Site Web Atos</h3>
+                        <p>C'est un site web de présentation de l'entreprise Atos, j'étais chargé de faire la partie Environnement de l'entreprise avec leurs actions menée pour réduire leur trace énergétique et Carbonne.</p>
+                        
+                        <h4>Savoirs mobilisés :</h4>
+                        <ul>
+                            <li>Connaissance des langages HTML et CSS pour la structure et le style</li>
+                            <li>Principes de design web et d'ergonomie utilisateur</li>
+                            <li>Techniques de responsive design pour l'adaptation multi-écrans</li>
+                            <li>Méthodes de travail en équipe et gestion de projet collaboratif</li>
+                        </ul>
+                        
+                        <h4>Savoir-faire acquis :</h4>
+                        <ul>
+                            <li>Maîtrise de la structuration HTML sémantique</li>
+                            <li>Application des styles CSS avancés (flexbox, grid, animations)</li>
+                            <li>Optimisation de l'interface pour différents types d'écrans</li>
+                            <li>Intégration et organisation du contenu multimédia</li>
+                            <li>Collaboration efficace avec Git et GitHub</li>
+                        </ul>                        <h4>Points à améliorer :</h4>
+                        <ul>
+                            <li>Améliorer mes compétences en JavaScript pour ajouter plus d'interactivité</li>
+                            <li>Optimiser davantage les performances de chargement des pages</li>
+                            <li>Développer une meilleure maîtrise des frameworks CSS modernes</li>
+                            <li>Renforcer la gestion de versions avec Git (branches, merge, etc.)</li>
+                            <li>Appliquer les bonnes pratiques d'accessibilité web</li>
+                            <li>Approfondir les techniques de responsive design avancées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">                <div class="skill-category">
+                    <h3>Langages de Programmation</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="skill-category">
+                    <h3>Technologies Web</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="skill-category">
+                    <h3>Outils & Autres</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>N'hésitez pas à me contacter pour toute collaboration ou opportunité.</p>
+                    <div class="contact-methods">                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hundert.johan@gmail.com</p>
+                            </div>
+                        </div>                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>0769459308</p>
+                            </div>
+                        </div>                        <div class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>https://github.com/JoJohdt</p>
+                            </div>                            <a href="https://github.com/JoJohdt" target="_blank" class="contact-btn">
+                                <img src="git.png" alt="GitHub" style="width: 20px; height: 20px;">
+                            </a>
+                        </div>
+                    </div>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Johan. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
